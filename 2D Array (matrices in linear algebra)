@@ -153,6 +153,8 @@ int main()
   to make 3rd matrix then sum secondary diagonal of
   1st matrix and 2nd matrix to make 3rd matrix */
   
+// this program run on the matrices has the same rows and columns
+  
     two_arrays();
     init();
     return 0;
