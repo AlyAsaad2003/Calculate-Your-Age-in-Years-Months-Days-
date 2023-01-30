@@ -3,13 +3,12 @@
 using namespace std;
 void init()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 }
     void two_arrays()
 {
-    init();
     int rows,columns;
     cin>>rows>>columns;
     long double list1[rows][columns];
@@ -136,9 +135,9 @@ void init()
     cout << "Sum of elements in matrix 2 = " << sum2 << endl;
     cout << "Sum of elements in matrix 3 that are the sum of matrix 1 and matrix 2 = " << sum3 << endl;
     cout<<"----------------------------------------------------------------------------------\n";
-    cout << "Sum of main diagonal of matrix 1 = " << maindiagonal1 << endl;
-    cout << "Sum of main diagonal of matrix 2 = " << maindiagonal2 << endl;
-    cout << "Sum of main diagonal of matrix 3 that are the sum of matrix 1 and matrix 2 = " << maindiagonal3 << endl;
+    cout << "Sum of main diagonal of matrix 1 [tr(list1)] = " << maindiagonal1 << endl;
+    cout << "Sum of main diagonal of matrix 2 [tr(list2)] = " << maindiagonal2 << endl;
+    cout << "Sum of main diagonal of matrix 3 that are the sum of matrix 1 and matrix 2 [tr(list3)] = " << maindiagonal3 << endl;
     cout<<"----------------------------------------------------------------------------------\n";
     cout << "Sum of secondary diagonal of matrix 1 = " << secondarydiagonal1 << endl;
     cout << "Sum of secondary diagonal of matrix 2 = " << secondarydiagonal2 << endl;
@@ -146,15 +145,17 @@ void init()
 }
 int main()
 {
-   
-/*this proagram makes you to input the number of
+/*this program makes you to input the number of
   rows and columns then input elements in 2 matrix
   according to number of rows and columns then sum
   of 1st matrix and 2nd matrix to make 3rd matrix
   then sum main diagonal of 1st matrix and 2nd matrix
   to make 3rd matrix then sum secondary diagonal of
   1st matrix and 2nd matrix to make 3rd matrix */
-    // this program on the matrices has the same rows and columns
+
+// this program run on the matrices has the same rows and columns [rows=columns]
+
     two_arrays();
+    init();
     return 0;
 }
