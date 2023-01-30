@@ -1,7 +1,13 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-void three_arrays()
+void init()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+}
+    void two_arrays()
 {
     int rows,columns;
     cin>>rows>>columns;
@@ -139,14 +145,15 @@ void three_arrays()
 }
 int main()
 {
+    init();
 /*this proagram makes you to input the number of
   rows and columns then input elements in 2 matrix
-  according to number of rows and columns then sum 
-  of 1st matrix and 2nd matrix to make 3rd matrix 
+  according to number of rows and columns then sum
+  of 1st matrix and 2nd matrix to make 3rd matrix
   then sum main diagonal of 1st matrix and 2nd matrix
-  to make 3rd matrix then sum secondary diagonal of 
+  to make 3rd matrix then sum secondary diagonal of
   1st matrix and 2nd matrix to make 3rd matrix */
-  // this program on the matrices has the same rows and columns
-    three_arrays();
+    // this program on the matrices has the same rows and columns
+    two_arrays();
     return 0;
 }
