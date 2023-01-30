@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t, c, x[10000];
+    c = 1;
+    while (c)
+    {
+        long long sum = 0, multi = 1, subtract;
+        cout << "Enter t of numbers : ";
+        cin >> t;
+        for (int i = 1; i <= t; i++) {
+            cin >> x[i];
+            subtract = x[1];
+        }
+        cout << "0 - Exit " << endl;
+        cout << "1 - Addition " << endl;
+        cout << "2 - Multiplication " << endl;
+        cout << "3 - Subtraction " << endl;
+        cout << "Choose a Number : " << endl;
+        cin >> c;
+        if (c == 0)
+            break;
+        else if (c == 1)
+        {
+            for (int i = 1; i <= t; i++)
+                sum += x[i];
+            cout << "Summation = " << sum << endl;
+            cout<<"-----------------------------\n";
+        }
+        else if (c == 2)
+        {
+            for (int i = 1; i <= t; i++)
+                multi *= x[i];
+            cout << "Multiplication = " << multi << endl;
+            cout<<"-----------------------------\n";
+        }
+        else if (c == 3)
+        {
+            for (int i = 1; i <= t-1; i++)
+            {
+                subtract -= x[i + 1];
+            }
+            cout << "subtraction = " << subtract << endl;
+            cout<<"-----------------------------\n";
+        }
+        else {
+            cout << "Error" << endl;
+            cout << "-----------------------------\n";
+        }
+    }
+    return 0;
+}
