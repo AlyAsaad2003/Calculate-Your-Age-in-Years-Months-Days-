@@ -9,6 +9,7 @@ void init()
 }
     void two_arrays()
 {
+    init();
     int rows,columns;
     cin>>rows>>columns;
     long double list1[rows][columns];
@@ -145,7 +146,7 @@ void init()
 }
 int main()
 {
-    init();
+   
 /*this proagram makes you to input the number of
   rows and columns then input elements in 2 matrix
   according to number of rows and columns then sum
