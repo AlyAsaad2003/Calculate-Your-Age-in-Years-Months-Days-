@@ -18,7 +18,7 @@ int main()
         cout << "1 - Addition " << endl;
         cout << "2 - Multiplication " << endl;
         cout << "3 - Subtraction " << endl;
-        cout<<"4 - factorial of every number in array "<<endl;
+        cout << "4 - factorial of every number in array "<<endl;
         cout << "Choose a Number : ";
         cin >> c;
         if (c == 0)
