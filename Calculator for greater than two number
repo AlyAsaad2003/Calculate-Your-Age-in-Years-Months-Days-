@@ -2,22 +2,24 @@
 using namespace std;
 int main()
 {
-    int t, c, x[10000];
+    int t, c, x[10000],arr[10000];
     c = 1;
     while (c)
     {
-        long long sum = 0, multi = 1, subtract;
+        long long sum = 0, multi = 1, subtract=0, factorial;
         cout << "Enter t of numbers : ";
         cin >> t;
         for (int i = 1; i <= t; i++) {
             cin >> x[i];
+            arr[i]=x[i];
             subtract = x[1];
         }
         cout << "0 - Exit " << endl;
         cout << "1 - Addition " << endl;
         cout << "2 - Multiplication " << endl;
         cout << "3 - Subtraction " << endl;
-        cout << "Choose a Number : " << endl;
+        cout<<"4 - factorial of every number in array "<<endl;
+        cout << "Choose a Number : ";
         cin >> c;
         if (c == 0)
             break;
@@ -42,6 +44,22 @@ int main()
                 subtract -= x[i + 1];
             }
             cout << "subtraction = " << subtract << endl;
+
+        }
+        else if (c == 4)
+        {
+            int j=1;
+            for (int i = 1; i <= t; i++)
+            {
+                factorial=1;
+                while(x[i]>0)
+                {
+                    factorial*=x[i];
+                    x[i]--;
+                }
+                cout<<"Factorial of "<<arr[j]<<" = "<<factorial<<endl;
+                j++;
+            }
             cout<<"-----------------------------\n";
         }
         else {
