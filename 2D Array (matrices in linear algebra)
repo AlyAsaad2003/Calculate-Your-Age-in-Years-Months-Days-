@@ -1,0 +1,151 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void three_arrays()
+{
+    int rows,columns;
+    cin>>rows>>columns;
+    long double list1[rows][columns];
+    long double list2[rows][columns];
+    long double list3[rows][columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            cout << "Enter " << i + 1 << " row , " << j + 1 << " column in matrix 1 = ";
+            cin >> list1[i][j];
+        }
+    }
+    cout << endl;
+    cout << "              matrix 1" << endl;
+    cout<<"          ";
+    for (int i = 0; i < rows; ++i) {
+        cout << "Col"<<i+1<<"      ";
+    }
+    for (int i = 0; i < rows; i++)
+    {
+        cout << "\nRow" << i + 1;
+        for (int j = 0; j < columns; j++)
+        {
+            cout << setiosflags(ios::fixed)
+                 << setiosflags(ios::showpoint)
+                 << setprecision(2)
+                 << setw(10)
+                 << list1[i][j];
+        }
+    }
+    cout << endl<< endl;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            cout << "Enter " << i + 1 << " row , " << j + 1 << " column in matrix 2 = ";
+            cin >> list2[i][j];
+        }
+    }
+    cout << endl;
+    cout << "              matrix 2" << endl;
+    cout<<"          ";
+    for (int i = 0; i < rows; ++i) {
+        cout << "Col"<<i+1<<"      ";
+    }
+    for (int i = 0; i < rows; i++)
+    {
+        cout << "\nRow" << i + 1;
+        for (int j = 0; j < columns; j++)
+        {
+            cout << setiosflags(ios::fixed)
+                 << setiosflags(ios::showpoint)
+                 << setprecision(2)
+                 << setw(10)
+                 << list2[i][j];
+        }
+    }
+    cout << endl << endl;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            list3[i][j] = list1[i][j] + list2[i][j];
+        }
+    }
+    cout << endl;
+    cout << "Sum of matrix 1 and matrix 2 ( matrix 3 )" << endl;
+    cout<<"          ";
+    for (int i = 0; i < rows; ++i) {
+        cout << "Col"<<i+1<<"      ";
+    }
+    for (int i = 0; i < rows; i++)
+    {
+        cout << "\nRow" << i + 1;
+        for (int j = 0; j < columns; j++)
+        {
+            cout << setiosflags(ios::fixed)
+                 << setiosflags(ios::showpoint)
+                 << setprecision(2)
+                 << setw(10)
+                 << list3[i][j];
+        }
+    }
+    cout << endl;
+    long double maindiagonal1 = 0, maindiagonal2 = 0, maindiagonal3 = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            if (i == j) {
+                maindiagonal1 += list1[i][j];
+                maindiagonal2 += list2[i][j];
+                maindiagonal3 += list3[i][j];
+            }
+        }
+    }
+    cout << endl;
+    long double sum1 = 0, sum2 = 0, sum3 = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            sum1 += list1[i][j];
+            sum2 += list2[i][j];
+            sum3 += list3[i][j];
+        }
+    }
+    cout << endl;
+    long double secondarydiagonal1 = 0, secondarydiagonal2 = 0, secondarydiagonal3 = 0;
+    for (int i = 0; i < rows;)
+    {
+        for (int j = columns-1; j >= 0;)
+        {
+            secondarydiagonal1 += list1[i][j];
+            secondarydiagonal2 += list2[i][j];
+            secondarydiagonal3 += list3[i][j];
+            i++;
+            j--;
+        }
+    }
+    cout<<endl;
+    cout << "Sum of elements in matrix 1 = " << sum1 << endl;
+    cout << "Sum of elements in matrix 2 = " << sum2 << endl;
+    cout << "Sum of elements in matrix 3 that are the sum of matrix 1 and matrix 2 = " << sum3 << endl;
+    cout<<"----------------------------------------------------------------------------------\n";
+    cout << "Sum of main diagonal of matrix 1 = " << maindiagonal1 << endl;
+    cout << "Sum of main diagonal of matrix 2 = " << maindiagonal2 << endl;
+    cout << "Sum of main diagonal of matrix 3 that are the sum of matrix 1 and matrix 2 = " << maindiagonal3 << endl;
+    cout<<"----------------------------------------------------------------------------------\n";
+    cout << "Sum of secondary diagonal of matrix 1 = " << secondarydiagonal1 << endl;
+    cout << "Sum of secondary diagonal of matrix 2 = " << secondarydiagonal2 << endl;
+    cout << "Sum of secondary diagonal of matrix 3 that are the sum of matrix 1 and matrix 2 = " << secondarydiagonal3 << endl;
+}
+int main()
+{
+/*this proagram makes you to input the number of
+  rows and columns then input elements in 2 matrix
+  according to number of rows and columns then sum 
+  of 1st matrix and 2nd matrix to make 3rd matrix 
+  then sum main diagonal of 1st matrix and 2nd matrix
+  to make 3rd matrix then sum secondary diagonal of 
+  1st matrix and 2nd matrix to make 3rd matrix */
+    three_arrays();
+    return 0;
+}
