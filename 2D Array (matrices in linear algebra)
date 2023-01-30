@@ -146,6 +146,7 @@ int main()
   then sum main diagonal of 1st matrix and 2nd matrix
   to make 3rd matrix then sum secondary diagonal of 
   1st matrix and 2nd matrix to make 3rd matrix */
+  // this program on the matrices has the same rows and columns
     three_arrays();
     return 0;
 }
