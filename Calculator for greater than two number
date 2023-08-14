@@ -9,7 +9,7 @@ long long fact(long long num)
 }
 int main()
 {
-    int t, c, x[10000],arr[10000];
+    int t, c, x[200001],arr[200001];
     c = 1;
     while (c)
     {
